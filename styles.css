@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(7,69,91,255);
+}
+
+@font-face {
+    font-family: eurostile-extended;
+    src: url(/fonts/eurostiles/EurostileExtended.ttf);
+}
+@font-face {
+    font-family: eurostile-extended-bold;
+    src: url(/fonts/eurostiles/EurostileBoldExtended.otf);
+}
+@font-face {
+    font-family: eurostile-bold;
+    src: url(/fonts/eurostiles/EurostileBold.ttf);
+}
+@font-face {
+    font-family: eurostile;
+    src: url(/fonts/eurostiles/EurostileNormal.ttf);
+}
+@font-face {
+    font-family: neuropolitical;
+    src: url(/fonts/neuropolitical\ rg.ttf);
+}
+.content-background{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden}
+.content-background video{filter: saturate(1.2); filter:contrast(.4);}
+/* hue-rotate(180deg) */
+
+nav {
+    padding: 0 15px;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+}
+.main-menu{
+    max-width: 910px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main-menu-item{
+    display: flex;
+    padding: 14px 24px 13px 16px;
+    color: rgba(111,130,146,.5);
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: eurostile-extended-bold, 'eurostile-extended-bold', 'Courier New', Courier, monospace;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    transition: padding .32s cubic-bezier(.215,.61,.355,1);
+    overflow: hidden;
+
+    order: 1;
+    text-align: center;
+}
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 42px;
+}
+.main-menu ul li {
+    position: relative;
+    flex: 1 1 186px;
+    margin-right: 2px;
+}
+.main-menu-item a {
+    text-decoration: none;
+    color: grey;
+}
+#instagram-btn{
+    height: 20px;
+    padding: 14px 17px 13px 10px;
+}
+
+.main-text{
+    /* font-family: eurostile-extended-bold, 'eurostile-extended-bold', 'Courier New', Courier, monospace; */
+    font-family: eurostile-extended;
+    color: aliceblue;
+}
+#main-text2{
+    font-family: eurostile-extended-bold;
+}
+
+
+@media (min-width: 700px){
+    #main-text1{
+        font-size: 69px;
+        letter-spacing: 10px;
+    }
+    #main-text2{
+        font-size: 70px;
+    }
+    .main-menu-item{
+        transform: scale(1);
+        transition: all 0.3s ease;
+    }
+    .main-menu-item a{
+        /* font-size: .5em; */
+    }
+    .main-menu-item:hover{
+        transform: scale(1.15);
+        /*normal padding: 14px 24px 13px 16px;*/
+        margin-top: -10px;
+        padding: 14px 30px 15.2px 30px;
+        z-index: 1;
+        border-radius: 25px 25px 0px 0px;
+    }
+    .main-menu-item:hover a{
+        color: rgba(7,69,91,255);
+    }
+    #research-menu-item:hover + #instagram-btn{
+        padding-left: 30px;
+    }
+    .main-menu-item:hover .main-menu{
+        max-width: 950px;
+    }
+    #instagram-btn:hover{
+        padding-left: 17px;
+        padding-bottom: 15.2px;
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .everything{ */
+    /* z-index: 1; */
+    /* background: repeating-linear-gradient( red, blue, red); */
+    /* background: repeating-radial-gradient(circle, pink 0%, blue 50%, pink 100%);
+    background-size: 900%;
+    width: 100%;
+    height: 100vh;
+    animation: animate 5s infinite; */
+    
+    /* background: repeating-radial-gradient(circle at right top, #2eff62 0%, #ca3df2, #2eff62 , #ca3df2 25%); */
+    /* background: url(/images/background_waves.jpeg) no-repeat top/100% auto;
+    z-index: 9999; */
+    /* background-size: 500% 500%; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* background-attachment: scroll; */
+    /* animation: animate 5s linear infinite; */
+    
+/* } */
+/* .content-background video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;-webkit-transform:translateX(-50%) translateY(-50%) translateZ(0);transform:translateX(-50%) translateY(-50%) translateZ(0)} */
+/* @keyframes animate{
+    0% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 10%;
+    }
+} */
+/* @keyframes animate{
+    0% {
+        background-position: 0%;
+    }
+    33%{
+        background-position: 110%;
+    }
+    66%{
+        background-position: 220%;
+    }
+    100%{
+        background-position: 330%;
+    }
+} */
+
+
+/* html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#animatedBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/images/lightspeed_animation.jpeg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    
+    animation: animatedBackground 500s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    
+    to {
+        background-position: -10000px 0;
+    }
+} */
